@@ -10,7 +10,6 @@ const FeedbackForm = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false); // Track submission
   const [showPopup, setShowPopup] = useState(false); // Track popup visibility
 
   const handleChange = (e) => {
@@ -35,7 +34,6 @@ const FeedbackForm = () => {
       console.log("Form submitted", formData);
 
       // Show popup after successful submission
-      setIsSubmitted(true);
       setShowPopup(true);
 
       // Hide the popup after 3 seconds

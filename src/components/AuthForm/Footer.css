@@ -1,0 +1,108 @@
+/* General Footer Styling */
+.footer {
+    background-color: #1e1e2e;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 200px; /* Ensure the footer has a minimum height */
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Control max width for large screens */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 40px; /* Add gap between the sections */
+  }
+  
+  /* Footer Section */
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px; /* Ensure each section has a minimum width */
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #4db5ff; /* Blue Accent */
+  }
+  
+  .footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d1d1e0;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #4db5ff;
+  }
+  
+  /* Social Media Icons */
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #4db5ff;
+    color: #fff;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    font-size: 1.2rem;
+  }
+  
+  .social-icons a:hover {
+    background-color: #348fd9;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #bdbdd6;
+  }
+  
+  /* For smaller screen sizes */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Center text for smaller screens */
+    }
+  
+    .social-icons a {
+      margin-right: 15px; /* Space out social icons on mobile */
+    }
+  }
+  

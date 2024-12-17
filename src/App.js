@@ -1,10 +1,14 @@
+// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginForm from "./components/AuthForm/LoginForm"; 
-import RegisterForm from "./components/AuthForm/RegisterForm"; 
+import LoginForm from "./components/AuthForm/LoginForm";
+import RegisterForm from "./components/AuthForm/RegisterForm";
 import Header from "./components/AuthForm/Header";
 import CardsGrid from "./components/AuthForm/CardsGrid";
-import Feedback  from "./components/AuthForm/Feedback";
+import Feedback from "./components/AuthForm/Feedback";
+import Chatbot from "./components/AuthForm/Chatbot";
+import Footer from "./components/AuthForm/Footer"; 
+import "./App.css"
 
 const App = () => {
   return (
@@ -16,8 +20,9 @@ const App = () => {
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/diseases" element={<CardsGrid />} />
         <Route path="/feedback" element={<Feedback />} />
-        {/* Add other routes here */}
+        <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
+      <Footer /> {/* Add Footer here */}
     </Router>
   );
 };
