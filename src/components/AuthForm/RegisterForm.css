@@ -1,0 +1,93 @@
+/* Register Form Styles */
+.auth-form {
+    width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease;
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group .icon {
+    position: absolute;
+    left: 10px;
+    color: #007bff;
+}
+
+input {
+    width: 100%;
+    padding: 10px 35px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #0056b3;
+}
+
+.btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background: #004085;
+    transform: translateY(-3px);
+}
+
+.redirect {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-secondary {
+    background-color: #1d50c8;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,101 @@
+/* General Reset */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Form Container */
+  .auth-form {
+    background-color: #ffffff; /* White background */
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+  }
+  
+  .auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333; /* Dark Gray */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #007bff; /* Blue Icon */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button Styling */
+  .btn {
+    background-color: #007bff; /* Primary Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker Blue */
+  }
+  
+  /* Register/Login Link */
+  .register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666; /* Light Gray */
+  }
+  
+  .register-link .link {
+    color: #007bff; /* Blue Link */
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .register-link .link:hover {
+    color: #0056b3; /* Darker Blue on hover */
+  }
+  
+  
