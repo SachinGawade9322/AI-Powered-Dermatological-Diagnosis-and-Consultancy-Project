@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./component/Sidebar";
 import ChatArea from "./component/ChatArea";
 import Response from "./component/Response";
+import ProfileHeader from "./component/profile/ProfileHeader";
+import Profile from "./component/profile/profile";
+import ProfileFooter from "./component/profile/profilefooter";
+import ProfileEdit from "./component/profile/ProfileEdit"; // Import Edit Profile Page
 import "./App.css";
 
 function App() {
@@ -30,15 +35,50 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <Sidebar chatHistory={chatHistory} onSelectChat={selectChat} />
-      <ChatArea
-        selectedChat={selectedChat}
-        messages={messages}
-        onSendMessage={handleSendMessage}
-      />
-      <Response messages={messages} />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Sidebar chatHistory={chatHistory} onSelectChat={selectChat} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <ChatArea
+                  selectedChat={selectedChat}
+                  messages={messages}
+                  onSendMessage={handleSendMessage}
+                />
+                <Response messages={messages} />
+              </>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <div className="profile-container">
+                <ProfileHeader />
+                <div className="profile-main-container">
+                  <Profile />
+                </div>
+                <ProfileFooter />
+              </div>
+            }
+          />
+          <Route
+            path="/profile/edit"
+            element={
+              <div className="profile-container">
+                <ProfileHeader />
+                <div className="profile-main-container">
+                  <ProfileEdit />
+                </div>
+                <ProfileFooter />
+              </div>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
