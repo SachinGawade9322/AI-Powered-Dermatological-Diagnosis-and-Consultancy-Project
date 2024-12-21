@@ -1,0 +1,17 @@
+.thread {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #4f545c;
+    border-radius: 5px;
+  }
+  
+  .thread h3 {
+    margin: 0;
+    color: white;
+  }
+  
+  .thread p {
+    margin: 5px 0 0;
+    color: #b9bbbe;
+  }
+  
