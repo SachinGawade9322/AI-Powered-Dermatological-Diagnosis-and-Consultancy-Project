@@ -10,6 +10,8 @@ import Feedback from "./components/AuthForm/Feedback/Feedback";
 import Chatbot from "./components/AuthForm/Chatbot/Chatbot";
 import Footer from "./components/AuthForm/Footer/Footer";
 import Home from "./components/AuthForm/Home/Home";
+import Aboutus from "./components/AuthForm/AboutUS/Aboutus";
+import Dashboard from "./components/AuthForm/Dashboard/Dashboard";
 
 
 // Styles
@@ -26,6 +28,8 @@ const App = () => {
         <Route path="/diseases" element={<CardsGrid />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/chatbot" element={<Chatbot />} />
+        <Route path="/aboutus" element={<Aboutus/>} />
+        <Route path="dashboard" element={<Dashboard/>} />
 
         <Route path="/" element={<Navigate to="/home" replace />} />
 

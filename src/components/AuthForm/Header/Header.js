@@ -32,6 +32,7 @@ const Header = () => {
           <span>HEALTHCARE APP</span>
         </div>
         <nav className="nav-links">
+          <Link to="/home">Home</Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/diseases">Diseases</Link>
           <Link to="/chatbot">Chatbot</Link>
@@ -57,7 +58,8 @@ const Header = () => {
                 </div>
                 <div className="category">
                   <h4>User</h4>
-                  <Link to="/profile">Profile</Link>
+                  <Link to="/Aboutus">About Us</Link>
+
                 </div>
               </div>
             )}

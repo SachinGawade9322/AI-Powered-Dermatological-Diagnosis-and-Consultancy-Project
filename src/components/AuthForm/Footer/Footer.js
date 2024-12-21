@@ -9,9 +9,7 @@ const Footer = () => {
         <div className="footer-section about">
           <h2>About Us</h2>
           <p>
-            We provide cutting-edge solutions for your business. Our mission is
-            to innovate and deliver high-quality products tailored to your
-            needs.
+            To make high-quality dermatological care accessible, affordable, and efficient by bridging the gap between technology and medical expertise
           </p>
         </div>
 
@@ -20,13 +18,13 @@ const Footer = () => {
           <h2>Quick Links</h2>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
               <a href="#services">Services</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/Aboutus">About</a>
             </li>
             <li>
               <a href="#contact">Contact</a>

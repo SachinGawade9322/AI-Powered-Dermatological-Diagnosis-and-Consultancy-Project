@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-
-
+// Import images if they are in src/assets/images
+import heroImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/home.jpg";
 
 const Home = () => {
   return (
@@ -14,7 +14,8 @@ const Home = () => {
           <button className="btn primary">Start Your Diagnosis</button>
         </div>
         <div className="hero-image">
-          <img src="E:\Final-year-pro\AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project\src\assets\images\h.jpg" alt=""/>
+          {/* Use imported heroImage */}
+          <img src={heroImage} alt="Hero Section" />
         </div>
       </header>
 
@@ -23,17 +24,14 @@ const Home = () => {
         <h2>Why Our App Stands Out?</h2>
         <div className="highlight-cards">
           <div className="card">
-            {/* <img src="/images/ai-diagnosis.png" alt="AI Diagnosis" /> */}
             <h3>AI Diagnosis</h3>
             <p>Our AI ensures accurate analysis for better skin care.</p>
           </div>
           <div className="card">
-            {/* <img src="/images/consultation.png" alt="Consultation" /> */}
             <h3>Expert Advice</h3>
             <p>Connect with certified dermatologists instantly.</p>
           </div>
           <div className="card">
-            {/* <img src="/images/treatment.png" alt="Personalized Treatment" /> */}
             <h3>Personalized Treatment</h3>
             <p>Custom solutions designed for your unique skin type and disease.</p>
           </div>
@@ -86,7 +84,7 @@ const Home = () => {
         <h2>Start Your Skin Care Journey Now</h2>
         <p>Don’t wait to address your skin concerns. Get in contact with an expert near you.</p>
         <form className="Expert_Consutant">
-          <input type="location" placeholder="Enter your location" />
+          <input type="text" placeholder="Enter your location" />
           <button type="submit" className="btn primary">Search</button>
         </form>
       </section>
