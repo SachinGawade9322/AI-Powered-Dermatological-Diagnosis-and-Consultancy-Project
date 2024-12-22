@@ -2,13 +2,14 @@ import React from 'react';
 //import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./Aboutus.css";
 
+
 const Aboutus = () => {
   return (
     <div id="about-us" className="about-us-section">
       <div className="container">
         <h1 className="title">About Us</h1>
         <p className="intro">
-          Welcome to <strong>[Your Organization/Project Name]</strong>, where innovation meets impact!
+          Welcome to <strong>Derma AI</strong>, where innovation meets impact!
         </p>
         <section className="vision-section">
           <h2>Our Vision</h2>
@@ -37,7 +38,7 @@ const Aboutus = () => {
         <section className="why-choose-us-section">
           <h2>Why Choose Us?</h2>
           <p>
-            At <strong>[Your Organization/Project Name]</strong>, we believe in combining science, empathy, and
+            At <strong>Derma AI</strong>, we believe in combining science, empathy, and
             innovation. Our commitment to excellence and user satisfaction drives us to constantly improve and evolve
             our solutions.
           </p>

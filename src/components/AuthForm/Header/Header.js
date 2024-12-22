@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaUserCircle, FaSearch, FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import heroImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/home.jpg";
 
 const Header = () => {
   const [isMoreOpen, setIsMoreOpen] = useState(false);
@@ -28,8 +29,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="nav-container">
+        {/* <div className="logo">
+          <span>Derma AI</span>
+        </div> */}
         <div className="logo">
-          <span>HEALTHCARE APP</span>
+          <img src={heroImage} alt="" className="logo-image" />
+          <span>Derma AI</span>
         </div>
         <nav className="nav-links">
           <Link to="/home">Home</Link>
@@ -49,15 +54,15 @@ const Header = () => {
             {isMoreOpen && (
               <div className="more-menu" ref={moreMenuRef}>
                 <div className="category">
-                  <h4>Media</h4>
+                  {/* <h4>Media</h4> */}
                   <Link to="/video-player">Video Player</Link>
                 </div>
                 <div className="category">
-                  <h4>Components</h4>
-                  <Link to="/notifications">Notifications</Link>
+                  {/* <h4>Components</h4> */}
+                  <Link to="/forum">Forum</Link>
                 </div>
                 <div className="category">
-                  <h4>User</h4>
+                  {/* <h4>User</h4> */}
                   <Link to="/Aboutus">About Us</Link>
 
                 </div>

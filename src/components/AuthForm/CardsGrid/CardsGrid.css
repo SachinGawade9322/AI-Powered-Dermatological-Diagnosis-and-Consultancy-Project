@@ -16,6 +16,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 250px; /* Increased card width */
+    height: 100%;
     text-align: center;
     padding: 20px; /* Increased padding for the card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -33,6 +34,8 @@
     border-radius: 50%;
     margin-bottom: 15px; /* Increased margin between image and text */
     border: 4px solid #007bff;
+    
+
   }
   
   /* Card Name */

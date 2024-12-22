@@ -1,8 +1,12 @@
 import React from "react";
 import "./Home.css";
-// Import images if they are in src/assets/images
-import heroImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/home.jpg";
+import { Link } from 'react-router-dom';
 
+// Import images from the `src` directory
+import heroImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/home.jpg"; // For hero section
+import trackImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Track.jpg"; // For Skin Health Tracker
+import recoImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Reco.jpg"; // For AI-Powered Recommendations
+import virImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/vir.jpg"
 const Home = () => {
   return (
     <div className="home-container">
@@ -10,11 +14,14 @@ const Home = () => {
       <header className="hero-section">
         <div className="hero-content">
           <h1>Your AI Dermatologist in a Few Clicks</h1>
-          <p>Experience fast, accurate, and expert-backed skin diagnosis with our easy-to-use web application.</p>
-          <button className="btn primary">Start Your Diagnosis</button>
+          <p>
+            Experience fast, accurate, and expert-backed skin diagnosis with our
+            easy-to-use web application.
+          </p>
+          <button className="btn primary"><Link to="/chatbot" style={{ color: 'inherit', textDecoration: 'none' }}>
+          Start Your Diagnosis</Link></button>
         </div>
         <div className="hero-image">
-          {/* Use imported heroImage */}
           <img src={heroImage} alt="Hero Section" />
         </div>
       </header>
@@ -33,7 +40,9 @@ const Home = () => {
           </div>
           <div className="card">
             <h3>Personalized Treatment</h3>
-            <p>Custom solutions designed for your unique skin type and disease.</p>
+            <p>
+              Custom solutions designed for your unique skin type and disease.
+            </p>
           </div>
         </div>
       </section>
@@ -43,19 +52,23 @@ const Home = () => {
         <h2>Our Offerings</h2>
         <div className="featured-grid">
           <div className="featured-item">
-            <img src="/images/feature1.jpg" alt="Feature 1" />
+            <img src={trackImage} alt="Skin Health Tracker" />
             <h3>Skin Health Tracker</h3>
             <p>Monitor your skin's progress over time with AI insights.</p>
           </div>
           <div className="featured-item">
-            <img src="/images/feature2.jpg" alt="Feature 2" />
+            <img src={recoImage} alt="AI-Powered Recommendations" />
             <h3>AI-Powered Recommendations</h3>
-            <p>Receive product and routine suggestions personalized for you.</p>
+            <p>
+              Receive product and routine suggestions personalized for you.
+            </p>
           </div>
           <div className="featured-item">
-            <img src="/images/feature3.jpg" alt="Feature 3" />
+            <img src={virImage} alt="Virtual Consultation" />
             <h3>Virtual Consultation</h3>
-            <p>Book a dermatologist session from the comfort of your home.</p>
+            <p>
+              Book a dermatologist session from the comfort of your home.
+            </p>
           </div>
         </div>
       </section>
@@ -65,15 +78,21 @@ const Home = () => {
         <h2>What Our Users Say</h2>
         <div className="testimonial-slider">
           <div className="testimonial">
-            <p>"This app transformed my skin care routine. Absolutely love it!"</p>
+            <p>
+              "This app transformed my skin care routine. Absolutely love it!"
+            </p>
             <span>- Keerti M.</span>
           </div>
           <div className="testimonial">
-            <p>"AI diagnosis was spot on and helped me find the right treatment."</p>
+            <p>
+              "AI diagnosis was spot on and helped me find the right treatment."
+            </p>
             <span>- Shamal P.</span>
           </div>
           <div className="testimonial">
-            <p>"Convenient and effective. Highly recommend it to everyone."</p>
+            <p>
+              "Convenient and effective. Highly recommend it to everyone."
+            </p>
             <span>- Siddheshwar P.</span>
           </div>
         </div>
@@ -82,7 +101,10 @@ const Home = () => {
       {/* Expert Consultancy */}
       <section className="Consult">
         <h2>Start Your Skin Care Journey Now</h2>
-        <p>Don’t wait to address your skin concerns. Get in contact with an expert near you.</p>
+        <p>
+          Don’t wait to address your skin concerns. Get in contact with an
+          expert near you.
+        </p>
         <form className="Expert_Consutant">
           <input type="text" placeholder="Enter your location" />
           <button type="submit" className="btn primary">Search</button>

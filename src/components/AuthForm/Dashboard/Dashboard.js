@@ -13,7 +13,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
-      <aside className="sidebar">
+      <aside className="side">
         <h2>Menu</h2>
         <a href="#overview" className="active">Overview</a>
         <a href="#reports">Reports</a>
@@ -23,7 +23,7 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="main-content">
+      <main className="main">
         {/* Dashboard Header */}
         <header className="dashboard-header">
           <h1>Welcome, John Doe</h1>

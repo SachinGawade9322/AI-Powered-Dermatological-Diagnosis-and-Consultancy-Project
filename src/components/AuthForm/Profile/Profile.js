@@ -1,100 +1,126 @@
 import React, { useState } from "react";
-import { FaUserCircle, FaEdit } from "react-icons/fa";
 import "./Profile.css";
 
-const Profile = () => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [userData, setUserData] = useState({
-    name: "John Doe",
-    email: "johndoe@example.com",
-    phone: "123-456-7890",
-    profilePicture: "https://via.placeholder.com/150",
-  });
+function Profile() {
+  const [medicalHistory, setMedicalHistory] = useState([
+    "Eczema",
+    "Acne",
+    "Psoriasis",
+  ]);
 
-  // Handle edit button click
-  const handleEditClick = () => {
-    setIsEditing(!isEditing);
+  const [uploadedImages, setUploadedImages] = useState([
+    "https://via.placeholder.com/150",
+    "https://via.placeholder.com/150",
+  ]);
+
+  const addMedicalHistory = () => {
+    const condition = prompt("Enter a new medical condition:");
+    if (condition) {
+      setMedicalHistory([...medicalHistory, condition]);
+    }
   };
 
-  // Handle input change
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
+  const uploadImage = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const newImage = URL.createObjectURL(file);
+      setUploadedImages([...uploadedImages, newImage]);
+
+      // Cleanup created object URLs when the component unmounts
+      return () => URL.revokeObjectURL(newImage);
+    }
   };
 
-  // Handle form submission
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setIsEditing(false);
-    // Optionally save the updated data
-    alert("Profile Updated");
+  const handleDeleteHistory = (index) => {
+    const updatedHistory = medicalHistory.filter((_, i) => i !== index);
+    setMedicalHistory(updatedHistory);
+  };
+
+  const handleDeleteImage = (index) => {
+    const updatedImages = uploadedImages.filter((_, i) => i !== index);
+    setUploadedImages(updatedImages);
   };
 
   return (
     <div className="profile-container">
-      <div className="profile-header">
-        <FaUserCircle className="profile-icon" />
-        <h2>Profile</h2>
+      {/* Sidebar */}
+      <div className="profile-sidebar">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="User"
+          className="profile-img"
+        />
+        <button className="edit-btn">Edit Profile</button>
+        <input
+          type="file"
+          accept="image/*"
+          id="upload"
+          style={{ display: "none" }}
+          onChange={uploadImage}
+        />
+        <label htmlFor="upload" className="upload-btn">
+          Upload Images
+        </label>
       </div>
 
-      <div className="profile-details">
-        {isEditing ? (
-          <form onSubmit={handleFormSubmit} className="profile-form">
-            <div className="form-group">
-              <label htmlFor="name">Full Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={userData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={userData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone:</label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                value={userData.phone}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <button type="submit" className="save-btn">
-              Save Changes
-            </button>
-          </form>
-        ) : (
-          <div className="profile-info">
-            <img
-              src={userData.profilePicture}
-              alt="Profile"
-              className="profile-image"
-            />
-            <p><strong>Name:</strong> {userData.name}</p>
-            <p><strong>Email:</strong> {userData.email}</p>
-            <p><strong>Phone:</strong> {userData.phone}</p>
-            <button className="edit-btn" onClick={handleEditClick}>
-              <FaEdit /> Edit
-            </button>
+      {/* Main Section */}
+      <div className="profile-main">
+        <h2>Public Profile</h2>
+        <div className="profile-info">
+          <div className="profile-detail">
+            <h3>Name</h3>
+            <p>John Doe</p>
           </div>
-        )}
+          <div className="profile-detail">
+            <h3>Email</h3>
+            <p>johndoe@example.com</p>
+          </div>
+          <div className="profile-detail">
+            <h3>About</h3>
+            <p>
+              AI Dermatology Expert specializing in skin condition analysis
+              through advanced machine learning techniques.
+            </p>
+          </div>
+        </div>
+
+        <h3>Medical History</h3>
+        <ul className="medical-history">
+          {medicalHistory.map((condition, index) => (
+            <li key={index}>
+              {condition}
+              <button
+                className="delete-btn"
+                onClick={() => handleDeleteHistory(index)}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button className="add-history-btn" onClick={addMedicalHistory}>
+          Add Medical History
+        </button>
+
+        <h3>Uploaded Images</h3>
+        <div className="uploaded-images">
+          {uploadedImages.map((image, index) => (
+            <div key={index} className="image-container">
+              <img src={image} alt={`Uploaded ${index}`} />
+              <button
+                className="delete-btn"
+                onClick={() => handleDeleteImage(index)}
+              >
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <button className="settings-btn">Advanced Settings</button>
       </div>
     </div>
   );
-};
+}
 
 export default Profile;

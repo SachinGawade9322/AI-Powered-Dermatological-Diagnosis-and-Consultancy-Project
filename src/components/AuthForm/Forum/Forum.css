@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  :root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #f1f5f9; /* Light Grey Background */
+    --active-color: #0056b3; /* Dark Blue for Active Items */
+    --hover-color: #e7f1ff; /* Light Blue Hover */
+    --input-bg: #ffffff; /* White Input Background */
+    --input-border: #ccc; /* Light Grey Border */
+    --text-color: #333; /* Dark Text Color */
+    --avatar-bg: #007bff; /* Blue Avatars */
+    --button-bg: #007bff; /* Button Blue */
+    --button-hover: #0056b3; /* Dark Blue Button Hover */
+    --border-radius: 10px;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Container */
+  .forum-container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+  
+  /* Sidebar */
+  .channels-sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    color: var(--text-color);
+    padding: 20px;
+    box-shadow: 2px 0 5px var(--shadow-color);
+  }
+  
+  .channels-sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .channels-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .channels-list li {
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .channels-list li:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .channels-list li.active {
+    background-color: var(--active-color);
+    color: white;
+  }
+  
+  /* Channel Actions */
+  .channel-actions {
+    margin-top: 20px;
+  }
+  
+  .channel-actions button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .channel-actions button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  /* Chat Area */
+  .chat-area {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  .chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .messages {
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    background-color: #72ddf0;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+  }
+  
+  .message-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    background-color: var(--avatar-bg);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .message-content {
+    margin-top: 10px;
+  }
+  
+  /* Chat Input Area */
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    outline: none;
+  }
+  
+  .chat-input input:focus {
+    border-color: var(--primary-color);
+  }
+  
+  .chat-input button {
+    background-color: var(--button-bg);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .chat-input button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--border-radius);
+  }
+  
+  .modal button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color: var(--button-hover);
+  }
+  

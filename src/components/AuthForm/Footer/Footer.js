@@ -21,7 +21,7 @@ const Footer = () => {
               <a href="/home">Home</a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="/services">Services</a>
             </li>
             <li>
               <a href="/Aboutus">About</a>
@@ -54,7 +54,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; 2024 YourCompanyName. All rights reserved.</p>
+        <p>&copy; 2024 Derma AI. All rights reserved.</p>
       </div>
     </footer>
   );

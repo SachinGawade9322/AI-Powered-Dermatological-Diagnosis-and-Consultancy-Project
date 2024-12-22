@@ -127,4 +127,4 @@ function ChatArea({ selectedChat }) {
   );
 }
 
-export default Chatbot;
+export default Chatbot
