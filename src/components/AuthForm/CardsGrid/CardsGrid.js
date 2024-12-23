@@ -1,17 +1,27 @@
 import React from "react";
 import "./CardsGrid.css";
 
+import acneImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Acne.jpg";
+import actImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Actinic Keratosis.jpg";
+import eczImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Eczema.jpg";
+import scarsImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Scars.jpg";
+import pigImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Pigmentation.jpg";
+import melaImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Melanoma.jpg";
+import vitImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Vitiligo.jpg";
+import tinImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Tinea corporis.jpg";
+import posImage from "E:/Final-year-pro/AI-Powered-Dermatological-Diagnosis-and-Consultancy-Project/src/assets/images/Disease/Psoriasis.jpg";
+
 const CardsGrid = () => {
   const cardsData = [
-    { id: 1, name: "John Doe", imgSrc: "https://via.placeholder.com/150" },
-    { id: 2, name: "Jane Smith", imgSrc: "https://via.placeholder.com/150" },
-    { id: 3, name: "Michael Johnson", imgSrc: "https://via.placeholder.com/150" },
-    { id: 4, name: "Emily Davis", imgSrc: "https://via.placeholder.com/150" },
-    { id: 5, name: "Chris Brown", imgSrc: "https://via.placeholder.com/150" },
-    { id: 6, name: "Amanda Wilson", imgSrc: "https://via.placeholder.com/150" },
-    { id: 7, name: "Jessica Martinez", imgSrc: "https://via.placeholder.com/150" },
-    { id: 8, name: "David Lee", imgSrc: "https://via.placeholder.com/150" },
-    { id: 9, name: "Sarah Taylor", imgSrc: "https://via.placeholder.com/150" },
+    { id: 1, name: "Acne", imgSrc: acneImage },
+    { id: 2, name: "Actinic Karatosis", imgSrc: actImage },
+    { id: 3, name: "Eczema", imgSrc: eczImage },
+    { id: 4, name: "Scars", imgSrc: scarsImage},
+    { id: 5, name: "Pigmentation", imgSrc: pigImage },
+    { id: 6, name: "Melanoma", imgSrc: melaImage },
+    { id: 7, name: "Vitiligo", imgSrc: vitImage },
+    { id: 8, name: "Tinea corporis", imgSrc: tinImage },
+    { id: 9, name: "Psoriasis", imgSrc: posImage },
   ];
 
   return (
