@@ -15,6 +15,16 @@ import Dashboard from "./components/AuthForm/Dashboard/Dashboard";
 import Profile from "./components/AuthForm/Profile/Profile";
 import Forum from "./components/AuthForm/Forum/Forum";
 import Services from "./components/AuthForm/Services/Services";
+import Acne from "./components/DiseasePages/Acne";
+import Docreco from "./components/DiseasePages/Docreco";
+import Karatosis from "./components/DiseasePages/Karatosis";
+import Eczema from "./components/DiseasePages/Eczema";
+import Scars from "./components/DiseasePages/Scars";
+import Pigmentation from "./components/DiseasePages/Pigmentation";
+import Melanoma from "./components/DiseasePages/Melanoma";
+import Vitiligo from "./components/DiseasePages/Vitiligo";
+import Tinea from "./components/DiseasePages/Tinea";
+import Psoriasis from "./components/DiseasePages/Psoriasis";
 
 // Styles
 import "./App.css";
@@ -35,6 +45,19 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="/services" element={<Services/>} />
+        <Route path="/acne" element={<Acne />} />
+        <Route path="/docreco" element={<Docreco />} />
+        <Route path="/karatosis" element={<Karatosis />} />
+        <Route path="/eczema" element={<Eczema />} />
+        <Route path="/scars" element={<Scars />} />
+        <Route path="/pigmentation" element={<Pigmentation />} />
+        <Route path="/melanoma" element={<Melanoma />} />
+        <Route path="/vitiligo" element={<Vitiligo />} />
+        <Route path="/tinea" element={<Tinea />} />
+        <Route path="/psoriasis" element={<Psoriasis />} />
+        
+
+
 
         <Route path="/" element={<Navigate to="/home" replace />} />
       </Routes>

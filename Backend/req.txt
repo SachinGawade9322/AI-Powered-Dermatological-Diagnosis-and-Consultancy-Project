@@ -1,0 +1,8 @@
+flask
+flask_bcrypt
+flask_jwt_extended
+flask_mail
+Flask_Limiter
+python-dotenv
+sqlalchemy
+werkzeug
